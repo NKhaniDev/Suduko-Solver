@@ -39,8 +39,6 @@ def display_sudoku(board):
         row_index+=1
 
 
-
-
 # validation of user entered sudoku
 
 def is_sudoku_valid(board):
@@ -67,14 +65,22 @@ def is_sudoku_valid(board):
     return True         
 
 
-sudoku_board = creat_sudoku_board()
-display_sudoku(sudoku_board)
+# solving the puzzle
 
-if is_sudoku_valid(sudoku_board):
-    print("data ara correct")
+#find empty cells
 
-else:
-    print("data entered are not correct")
+def find_empty_spot(board):
+    
+
+
+#sudoku_board = creat_sudoku_board()
+#display_sudoku(sudoku_board)
+
+#if is_sudoku_valid(sudoku_board):
+#    print("data ara correct")
+
+#else:
+#    print("data entered are not correct")
 
              
 
