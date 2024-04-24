@@ -70,7 +70,16 @@ def is_sudoku_valid(board):
 #find empty cells
 
 def find_empty_spot(board):
-    
+
+    for row in range(9):
+        for col in range(9):
+            if board[row][col]==0:
+                return row, col
+                
+    return None        
+
+
+
 
 
 #sudoku_board = creat_sudoku_board()
