@@ -78,6 +78,9 @@ def find_empty_spot(board):
                 
     return None        
 
+# check the cell feasibilty for adding the number
+
+def 
 
 
 
