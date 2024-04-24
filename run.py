@@ -97,10 +97,25 @@ def can_place_number(board,num,row, col):
             
     return True        
 
+
+# solve puzzle
 def solve_puzzle(board):
 
     empty_spot = find_empty_spot(board)
-    if 
+    if not empty_spot:
+        return True
+    r,c =empty_spot
+
+    for number in range(1,10):
+        if can_place_number(board,number.r,c):
+            board[r][c]=number
+            if solve_puzzle(board):
+                return True
+            boardp[r][c]=0
+    return False        
+
+# main solver
+
 
 
 
