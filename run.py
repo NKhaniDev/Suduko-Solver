@@ -39,8 +39,7 @@ def display_sudoku(board):
         row_index+=1
 
 
-#sudoku_board = creat_sudoku_board()
-#display_sudoku(sudoku_board)
+
 
 # validation of user entered sudoku
 
@@ -68,6 +67,14 @@ def is_sudoku_valid(board):
     return True         
 
 
-                
+sudoku_board = creat_sudoku_board()
+display_sudoku(sudoku_board)
+
+if is_sudoku_valid(sudoku_board):
+    print("data ara correct")
+
+else:
+    print("data entered are not correct")
+
              
 
