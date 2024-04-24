@@ -53,10 +53,10 @@ def is_sudoku_valid(board):
 
     for r in range(9):
         for c in range(9):
-            num=board[r][c]
-            if num !=0:
-                block_index =(r//3)*3+(c//3)
-                if num in row_sets[r] or num in col_sets[c] or block_sets[block_index]:
+            num = board[r][c]
+            if num != 0:
+                block_index =(r//3) * 3 + c//3
+                if num in row_sets[r] or num in col_sets[c] or num in block_sets[block_index]:
                     return False
                 row_sets[r].add(num)
                 col_sets[c].add(num)
@@ -107,7 +107,7 @@ def solve_puzzle(board):
     r,c =empty_spot
 
     for number in range(1,10):
-        if can_place_number(board,number.r,c):
+        if can_place_number(board,number,r,c):
             board[r][c]=number
             if solve_puzzle(board):
                 return True
@@ -135,19 +135,13 @@ def run_sudoku_solver():
         if input("start from the begining?(y/n):").lower()  != "y":
             break    
 
+if __name__=="__main__":
+  run_sudoku_solver()
 
 
 
 
 
 
-#sudoku_board = creat_sudoku_board()
-#display_sudoku(sudoku_board)
-
-#if is_sudoku_valid(sudoku_board):
-#    print("data ara correct")
-
-#else:
-#    print("data entered are not correct")
 
              
