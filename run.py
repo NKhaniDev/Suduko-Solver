@@ -23,5 +23,21 @@ def get_user_row_input(index):
     else:
         print("invalid value")
 
+#show sudko entered data
 
-creat_sudoku_board() 
+def display_sudoku(board):
+    row_index=0
+    for row in board:
+        row_display="|"
+        for num in row:
+            if num==0:
+                row_display += "  |"
+            else:
+                row_display+=str(num)+"  |  "
+    
+        print(row_display)
+        row_index+=1
+
+
+sudoku_board = creat_sudoku_board()
+display_sudoku(sudoku_board)
