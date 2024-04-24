@@ -44,4 +44,30 @@ def display_sudoku(board):
 
 # validation of user entered sudoku
 
-def
+def is_sudoku_valid(board):
+    row_sets = []
+    col_sets = []
+    block_sets = []
+
+    for _ in range(9):
+        row_sets.append(set())
+        col_sets.append(set())
+        block_sets.append(set())
+
+    for r in range(9):
+        for c in range(9):
+            num=board[r][c]
+            if num !=0:
+                block_index =(r//3)*3+(c//3)
+                if num in row_sets[r] or num in col_sets[c] or block_sets[block_index]:
+                    return False
+                row_sets[r].add(num)
+                col_sets[c].add(num)
+                block_sets[block_index].add(num)
+
+    return True         
+
+
+                
+             
+
