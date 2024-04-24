@@ -1,3 +1,9 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+#creat duduko table
+
+def creat_sudoku_board():
+    sudoku_board=[]
+
+    for i in range(1,10):
+        row=getting_row_values(i)
+        sudolu_board.append(row)
+    return sudoku_board    
