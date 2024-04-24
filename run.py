@@ -36,7 +36,7 @@ def display_sudoku(board):
                 row_display+=str(num)+"  |  "
     
         print(row_display)
-        row_index+=1
+        row_index += 1 
 
 
 # validation of user entered sudoku
@@ -97,6 +97,10 @@ def can_place_number(board,num,row, col):
             
     return True        
 
+def solve_puzzle(board):
+
+    empty_spot = find_empty_spot(board)
+    if 
 
 
 
