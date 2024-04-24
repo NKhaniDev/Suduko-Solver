@@ -80,7 +80,23 @@ def find_empty_spot(board):
 
 # check the cell feasibilty for adding the number
 
-def 
+def can_place_number(board,num,row, col):
+    for i in range(9):
+        if board[row][i] == num:
+            return False
+        if board[i][col] == num:
+            return False
+
+    block_row_start=(row//3)*3
+    block_col_start=(col//3)*3
+
+    for i in range(3):
+        for j in range(3):
+            if board [block_row_start+i][block_col_start+j] == num:
+                return False
+            
+    return True        
+
 
 
 
