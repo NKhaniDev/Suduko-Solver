@@ -39,5 +39,9 @@ def display_sudoku(board):
         row_index+=1
 
 
-sudoku_board = creat_sudoku_board()
-display_sudoku(sudoku_board)
+#sudoku_board = creat_sudoku_board()
+#display_sudoku(sudoku_board)
+
+# validation of user entered sudoku
+
+def
