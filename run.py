@@ -111,10 +111,31 @@ def solve_puzzle(board):
             board[r][c]=number
             if solve_puzzle(board):
                 return True
-            boardp[r][c]=0
+            board[r][c]=0
     return False        
 
 # main solver
+def run_sudoku_solver():
+    while True:
+        sudoku_board =creat_sudoku_board()
+        print("current sudulu board")
+        display_sudoku(sudoku_board)
+        if is_sudoku_valid(sudoku_board):
+            print("board is valid")
+
+            if solve_puzzle(sudoku_board):
+                print("Sudoku Solved.")
+                display_sudoku(sudoku_board)
+            else:
+                print("No solution exist for the given Sudoku")  
+
+        else:
+            print("Board has conflicts and can not be solved.")
+
+        if input("start from the begining?(y/n):").lower()  != "y":
+            break    
+
+
 
 
 
@@ -130,4 +151,3 @@ def solve_puzzle(board):
 #    print("data entered are not correct")
 
              
-
