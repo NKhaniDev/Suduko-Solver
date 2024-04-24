@@ -26,17 +26,22 @@ def get_user_row_input(index):
 #show sudko entered data
 
 def display_sudoku(board):
+    print("+----------+----------+----------+")
     row_index=0
     for row in board:
         row_display="|"
         for num in row:
             if num==0:
-                row_display += "  |"
+                row_display += "  | "
             else:
-                row_display+=str(num)+"  |  "
+                row_display += str(num)+" | "
+
+            
     
         print(row_display)
         row_index += 1 
+        if row_index % 3 ==0:
+             print("+----------+----------+----------+")
 
 
 # validation of user entered sudoku
@@ -118,7 +123,7 @@ def solve_puzzle(board):
 def run_sudoku_solver():
     while True:
         sudoku_board =creat_sudoku_board()
-        print("current sudulu board")
+        print("current suduku board")
         display_sudoku(sudoku_board)
         if is_sudoku_valid(sudoku_board):
             print("board is valid")
