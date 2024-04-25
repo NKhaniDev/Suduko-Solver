@@ -30,11 +30,13 @@ def display_sudoku(board):
     row_index=0
     for row in board:
         row_display="|"
+        col_index = 0
         for num in row:
             if num==0:
-                row_display += "   | "
+                cell = "  "
             else:
-                row_display += f"{num:2} | "
+                cell += f"{num:2}"
+            row_display += cell + " | "
 
             if (col_index+1) %3 == 0 and (col_index+1)  != 9:
                 row_display += "| "
