@@ -147,10 +147,20 @@ def solve_puzzle(board):
 
 # main solver
 def run_sudoku_solver():
+    print("Welcome to the Interactive Sudoku Solver!")
+    print("Instructions:")
+    print("1. You will be prompted to enter each row of the Sudoku grid.")
+    print("2. Each row must contain exactly 9 digits, where '0' represents an empty cell.")
+    print("3. Enter the digits consecutively without spaces (e.g., 530470001 for the first row).")
+    print("4. At any point, if you wish to exit, type 'exit' instead of entering a row.")
+    print("5. After all rows are entered, the solver will attempt to solve the Sudoku if it's valid.")
+    print("6. If the board has any conflicts or if an incorrect entry is made, you will be notified.")
+    print("7. You can restart at any time by answering 'y' when asked to start from the beginning after solving or exiting.")
+    print("\nLet's start entering the Sudoku grid!\n")
+
     while True:
         sudoku_board =creat_sudoku_board()
         if sudoku_board == "exit":
-            print("current suduku board\n")
             print("Exiting game.")
             break
         print("Current Sudoku board:\n")
