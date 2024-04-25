@@ -26,27 +26,30 @@ def get_user_row_input(index):
 #show sudko entered data
 
 def display_sudoku(board):
-    print("+----------+----------+----------+")
-    row_index=0
-    for row in board:
+    print("+--------------+---------------+---------------+")
+    for i in range(len(board)):
+        
+
         row_display="|"
-        col_index = 0
-        for num in row:
+        
+        for j in range(len(board[i])):
+            num = board[i][j]
             if num==0:
-                cell = "  "
+                row_display += "    |"
             else:
-                cell += f"{num:2}"
-            row_display += cell + " | "
+                row_display += f" {num:2} |"
 
-            if (col_index+1) %3 == 0 and (col_index+1)  != 9:
-                row_display += "| "
+           
 
-            col_index += 1   
+            if (j + 1) % 3 == 0 and (j + 1) != 9:
+                row_display += "|"
+
+              
 
         print(row_display)
-        row_index += 1 
-        if row_index % 3 ==0:
-             print("+----------+----------+----------+")
+        if (i + 1) % 3 == 0:
+        
+            print("+--------------+---------------+---------------+")        
 
 
 
