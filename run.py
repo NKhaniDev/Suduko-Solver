@@ -5,6 +5,9 @@ def creat_sudoku_board():
 
     for i in range(1,10):
         row=get_user_row_input(i)
+        if row == "exit":
+            return "exit"
+        
         sudoku_board.append(row)
     return sudoku_board    
 
@@ -13,17 +16,35 @@ def creat_sudoku_board():
 
 def get_user_row_input(index):
 
-    user_input=input(f"Please enter {index} row:  \n")
-    if len(user_input)==9 and user_input.isdigit():
-        row_numbers=[]
-        for char in user_input:
-            row_numbers.append(int(char))
-        print("|" + "|".join(user_input)+"|" )
-        return row_numbers
-    else:
-        print("invalid value")
+    while True:  
 
-#show sudko entered data
+        user_input=input(f"Please enter {index} row:  \n")
+        if user_input.lower() == 'exit':
+             return "exit"
+        if len(user_input)==9 and user_input.isdigit():
+            valid_input = True
+            row_numbers = []
+            row_string = "|"
+            for char in user_input:
+                if '0' <= char <= '9':
+                    row_numbers.append(int(char))
+                    row_string+= char + "|"
+                else:    
+                    valid_input = False
+                    break
+
+            if valid_input:    
+                print(row_string)
+
+
+                return row_numbers
+            else:
+                print("Invalid value. Each digit must be between 1 and 9.")
+
+        else:
+            print("invalid value. Please ensure all characters are digits from 1 to 9 and exatly 9 long.\n")
+
+#show sudoku entered data
 
 def display_sudoku(board):
     print("+--------------+---------------+---------------+")
@@ -128,7 +149,11 @@ def solve_puzzle(board):
 def run_sudoku_solver():
     while True:
         sudoku_board =creat_sudoku_board()
-        print("current suduku board\n")
+        if sudoku_board == "exit":
+            print("current suduku board\n")
+            print("Exiting game.")
+            break
+        print("Current Sudoku board:\n")
         display_sudoku(sudoku_board)
         if is_sudoku_valid(sudoku_board):
             print("board is valid.\n")
