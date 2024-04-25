@@ -13,12 +13,12 @@ def creat_sudoku_board():
 
 def get_user_row_input(index):
 
-    user_input=input(f"enter {index} row")
+    user_input=input(f"Please enter {index} row:  \n")
     if len(user_input)==9 and user_input.isdigit():
         row_numbers=[]
         for char in user_input:
             row_numbers.append(int(char))
-        print("|" + "|".join(user_input)+"|")
+        print("|" + "|".join(user_input)+"|" )
         return row_numbers
     else:
         print("invalid value")
@@ -39,16 +39,12 @@ def display_sudoku(board):
             else:
                 row_display += f" {num:2} |"
 
-           
-
             if (j + 1) % 3 == 0 and (j + 1) != 9:
                 row_display += "|"
 
-              
-
         print(row_display)
-        if (i + 1) % 3 == 0:
         
+        if (i + 1) % 3 == 0:
             print("+--------------+---------------+---------------+")        
 
 
@@ -132,21 +128,21 @@ def solve_puzzle(board):
 def run_sudoku_solver():
     while True:
         sudoku_board =creat_sudoku_board()
-        print("current suduku board")
+        print("current suduku board\n")
         display_sudoku(sudoku_board)
         if is_sudoku_valid(sudoku_board):
-            print("board is valid")
+            print("board is valid.\n")
 
             if solve_puzzle(sudoku_board):
-                print("Sudoku Solved.")
+                print("Sudoku Solved.\n")
                 display_sudoku(sudoku_board)
             else:
-                print("No solution exist for the given Sudoku")  
+                print("No solution exist for the given Sudoku.\n")  
 
         else:
-            print("Board has conflicts and can not be solved.")
+            print("Board has conflicts and can not be solved.\n")
 
-        if input("start from the begining?(y/n):").lower()  != "y":
+        if input("start from the begining?(y/n):  ").lower()  != "y":
             break    
 
 if __name__=="__main__":
