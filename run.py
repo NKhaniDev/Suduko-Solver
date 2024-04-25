@@ -32,16 +32,20 @@ def display_sudoku(board):
         row_display="|"
         for num in row:
             if num==0:
-                row_display += "  | "
+                row_display += "   | "
             else:
-                row_display += str(num)+" | "
+                row_display += f"{num:2} | "
 
-            
-    
+            if (col_index+1) %3 == 0 and (col_index+1)  != 9:
+                row_display += "| "
+
+            col_index += 1   
+
         print(row_display)
         row_index += 1 
         if row_index % 3 ==0:
              print("+----------+----------+----------+")
+
 
 
 # validation of user entered sudoku
