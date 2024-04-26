@@ -147,6 +147,9 @@ def solve_puzzle(board):
 
 # main solver
 def run_sudoku_solver():
+    print("=======================================")
+    print("             Sudoku Solver")
+    print("=======================================")
     print("Welcome to the Interactive Sudoku Solver!")
     print("Instructions:")
     print("1. You will be prompted to enter each row of the Sudoku grid.")
@@ -161,7 +164,7 @@ def run_sudoku_solver():
     while True:
         sudoku_board =creat_sudoku_board()
         if sudoku_board == "exit":
-            print("Exiting game.")
+            print("Exiting solver.")
             break
         print("Current Sudoku board:\n")
         display_sudoku(sudoku_board)
