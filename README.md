@@ -14,7 +14,9 @@ The Sudoku Solver is an interactive console application written in Python design
 6. **Outcome**: The solution is displayed or a message indicating failure.
 
 ### Flow Chart
-A flowchart is provided as a `Flowchart.png` file in the repository to illustrate the logic flow of the program, detailing each step from initialization to completion.
+A flowchart is provided as a `Flowchart.jpg` file in the repository to illustrate the logic flow of the program, detailing each step from initialization to completion.
+
+![Flowchart](flowchart.jpg)
 
 ### Backtracking Algorithm
 The solver uses a backtracking algorithm, a depth-first search technique for solving the puzzle:
