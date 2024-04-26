@@ -53,10 +53,38 @@ The solver uses a backtracking algorithm, a depth-first search technique for sol
 
 ## Testing
 To test the Sudoku Solver:
-1. **Manual Testing**: Enter known puzzles into the program and verify the output matches expected results.
+
+- **Complete example**:
+    - **Input data**: 
+    ![Data input](data1.png)
+    - **Showing valid sudoku**: 
+    ![Valid puzzle](valid1.png)
+     - **Soluition**: 
+    ![Solved puzzle](result1.png)
+
+
+- **invalid puzzle example**:
+    - **Input data**: 
+    ![Wrong input](data2.png)
+    - **Showing valid sudoku**: 
+    ![invalid Puzzle](valid2.png)
+
+- **Quit the program while entering the data**:
+
+    ![QUit](Quit.png)
+
+
 
 
 ## Credits
+
+https://www.youtube.com/watch?v=auK3PSZoidc&ab_channel=MITOpenCourseWare
+https://www.youtube.com/watch?v=eqUwSA0xI-s&ab_channel=TechWithTim
+https://www.youtube.com/watch?v=G_UYXzGuqvM&ab_channel=Computerphile
+https://www.youtube.com/watch?v=b_T-brYofN4&t=422s&ab_channel=NeuralNine
+https://www.youtube.com/watch?v=tvP_FZ-D9Ng&t=10s&ab_channel=KylieYing
+https://www.youtube.com/watch?v=PZJ5mjQyxR8&ab_channel=Pythonenthusiast
+https://www.youtube.com/watch?v=8kKlEnBxa5M&ab_channel=GamesComputersPlay
 
 
 ## Usage Instructions
