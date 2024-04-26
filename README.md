@@ -63,11 +63,11 @@ To test the Sudoku Solver:
     ![Solved puzzle](result1.png)
 
 
-- **invalid puzzle example**:
-    - **Input data**: 
+- **Invalid puzzle example**:
+    - **Invalid input data**: 
     ![Wrong input](data2.png)
-    - **Showing valid sudoku**: 
-    ![invalid Puzzle](valid2.png)
+    - **INvalid puzzle**: 
+    ![Invalid Puzzle](valid2.png)
 
 - **Quit the program while entering the data**:
 
