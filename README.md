@@ -1,6 +1,9 @@
 # Sudoku Solver
 
 ## Code Institute - Third Milestone Project: Python programming.
+
+### A live demo to the APP can be found [here](https://solver-sudoku-9b9b5a47dc52.herokuapp.com/)
+
 ## Description
 The Sudoku Solver is an interactive console application written in Python designed to solve 9x9 Sudoku puzzles. The program prompts the user to enter each row of the Sudoku grid, checks for validity, and if the board setup is valid, uses a backtracking algorithm to find a solution.
 
