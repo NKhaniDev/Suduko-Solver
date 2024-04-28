@@ -1,6 +1,9 @@
-#creat duduko table
+
 
 def creat_sudoku_board():
+    """
+    Collects the full sudoku table from the user.
+    """
     sudoku_board=[]
 
     for i in range(1,10):
@@ -12,9 +15,12 @@ def creat_sudoku_board():
     return sudoku_board    
 
 
-#getting row values from user
+
 
 def get_user_row_input(index):
+    """
+    request a row of numbers from the user.
+    """
 
     while True:  
 
@@ -36,17 +42,19 @@ def get_user_row_input(index):
             if valid_input:    
                 print(row_string)
 
-
                 return row_numbers
             else:
-                print("Invalid value. Each digit must be between 1 and 9.")
+                print("Invalid value. Each digit must be between 1 and 9.\n")
 
         else:
             print("invalid value. Please ensure all characters are digits from 1 to 9 and exatly 9 long.\n")
 
-#show sudoku entered data
+
 
 def display_sudoku(board):
+    """
+    display the sudoku in a visually appealling format.
+    """
     print("+--------------+---------------+---------------+")
     for i in range(len(board)):
         
@@ -70,9 +78,12 @@ def display_sudoku(board):
 
 
 
-# validation of user entered sudoku
+
 
 def is_sudoku_valid(board):
+    """
+    Check if the provided Sudoku board has any conflicts.
+    """
     row_sets = []
     col_sets = []
     block_sets = []
@@ -96,11 +107,12 @@ def is_sudoku_valid(board):
     return True         
 
 
-# solving the puzzle
 
-#find empty cells
 
 def find_empty_spot(board):
+    """ 
+    Find the next empty spot on the board.
+    """
 
     for row in range(9):
         for col in range(9):
@@ -109,9 +121,12 @@ def find_empty_spot(board):
                 
     return None        
 
-# check the cell feasibilty for adding the number
+
 
 def can_place_number(board,num,row, col):
+    """ 
+    Check if it's valid to place a number in a specific spot.
+    """
     for i in range(9):
         if board[row][i] == num:
             return False
@@ -129,9 +144,11 @@ def can_place_number(board,num,row, col):
     return True        
 
 
-# solve puzzle
-def solve_puzzle(board):
 
+def solve_puzzle(board):
+    """ 
+    Solve the Sudoku puzzle using a recursive backtracking algorithm.
+    """
     empty_spot = find_empty_spot(board)
     if not empty_spot:
         return True
@@ -145,8 +162,11 @@ def solve_puzzle(board):
             board[r][c]=0
     return False        
 
-# main solver
+
 def run_sudoku_solver():
+    """ 
+    The main function that runs the Sudoku solver program.
+    """
     print("=======================================")
     print("             Sudoku Solver")
     print("=======================================")
@@ -164,7 +184,7 @@ def run_sudoku_solver():
     while True:
         sudoku_board =creat_sudoku_board()
         if sudoku_board == "exit":
-            print("Exiting solver.")
+            print("Exiting solver.\n")
             break
         print("Current Sudoku board:\n")
         display_sudoku(sudoku_board)
