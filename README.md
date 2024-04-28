@@ -79,7 +79,6 @@ To test the Sudoku Solver:
 
 
 
-
 ## Credits
 
 https://www.youtube.com/watch?v=auK3PSZoidc&ab_channel=MITOpenCourseWare
